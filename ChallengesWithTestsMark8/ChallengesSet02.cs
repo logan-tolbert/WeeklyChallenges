@@ -8,6 +8,9 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
+            bool result = Char.IsLetter(c);
+            return result;
+
             throw new NotImplementedException();
         }
 
@@ -131,20 +134,18 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            /*  8/13 test passed
-            if (number < 0)
+
+            Int32 newNums = Convert.ToInt32(number);
+            if (number <= 1)
+            {
                 return 0;
-             long oddCount = 0;
-            for (long i = number; i == 0; i--)  
-                 if (number % 2 == 1)
-                     oddCount += 1;
-            */
-
-           // 8/13 tests passed
-           if (number < 0)
-               return 0;
-           return ((number +1)/2);
-
+            }
+            if (number % 2 == 0)
+            {
+                return (newNums + 1) / (long)2;
+            }
+            else if (number % 2 == 1)
+                return(newNums - 1) / (long)2;
             throw new NotImplementedException();
         }
     }
