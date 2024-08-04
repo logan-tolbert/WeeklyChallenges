@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -13,29 +14,56 @@ namespace ChallengesWithTestsMark8
             }
             for (int i = 0; i <= vals.Length - 1; i++)
             {
-
                 if (vals[i] == false)
                 {
                     return true;
                 }
-     
             }
             return false;
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            int sumOfOdds = 0;
+            
+            if (numbers == null || numbers.Any())
+            {
+                return false;
+            }
+            
+            var iterable = numbers.GetEnumerator();
+            int number = iterable.Current;
+
+            while (iterable.MoveNext())
+            {
+                if (number % 2 == 1)
+                {
+                    sumOfOdds += number;
+                }
+            }
+            return (sumOfOdds % 2 == 1);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            string upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+            string lowerCaseChars = "abscefghijklmnopqrstuvwxyz";
+            string numbers = "0123456789";
+           
+            if (password.Any(char.IsDigit) && password.Contains(upperCaseChars) && password.Contains(lowerCaseChars) || password.Any(char.IsDigit) && password.Contains(upperCaseChars))
+            {
+                return true;
+            }
+            return false;
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i <= 1; i++)
+            {
+                return (char)val[i];
+            }
+            return '\0';
         }
 
         public char GetLastLetterOfString(string val)
