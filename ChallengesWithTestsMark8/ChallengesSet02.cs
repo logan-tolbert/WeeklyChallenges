@@ -10,30 +10,29 @@ namespace ChallengesWithTestsMark8
         {
             bool result = Char.IsLetter(c);
             return result;
-
-            throw new NotImplementedException();
         }
 
+        
         public bool CountOfElementsIsEven(string[] vals)
         {
             bool countIsEven = vals.Length % 2 == 0;
             return countIsEven;
-            throw new NotImplementedException();
         }
 
+        
         public bool IsNumberEven(int number)
         {
             bool numIsEven = number % 2 == 0;
             return numIsEven;
-            throw new NotImplementedException();
         }
+        
 
         public bool IsNumberOdd(int num)
         {
             bool numIsOdd = num % 2 != 0;
             return numIsOdd;
-            throw new NotImplementedException();
         }
+        
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
@@ -51,9 +50,9 @@ namespace ChallengesWithTestsMark8
           
             sum = maxNum + minNum;
             return sum;
-            throw new NotImplementedException();
         }
 
+        
         public int GetLengthOfShortestString(string str1, string str2)
         {
             int length1 = str1.Length;
@@ -70,10 +69,9 @@ namespace ChallengesWithTestsMark8
             {
                 return length1;
             }
-          
-            throw new NotImplementedException();
         }
 
+        
         public int Sum(int[] numbers)
         {
             int sumOfNumbers = 0;
@@ -91,9 +89,9 @@ namespace ChallengesWithTestsMark8
                 sumOfNumbers += number;
             }
             return sumOfNumbers;
-            throw new NotImplementedException();
         }
 
+        
         public int SumEvens(int[] numbers)
         {
             int sumOfEvens = 0;
@@ -113,9 +111,9 @@ namespace ChallengesWithTestsMark8
                 }
             }
             return sumOfEvens;
-            throw new NotImplementedException();
         }
 
+        
         public bool IsSumOdd(List<int> numbers)
         {
             int sumOfNumbers = 0;
@@ -129,12 +127,11 @@ namespace ChallengesWithTestsMark8
                 sumOfNumbers += number;
             }
             return (sumOfNumbers % 2 != 0);
-            throw new NotImplementedException();
         }
 
+        
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-
             Int32 newNums = Convert.ToInt32(number);
             if (number <= 1)
             {
@@ -146,7 +143,7 @@ namespace ChallengesWithTestsMark8
             }
             else if (number % 2 == 1)
                 return(newNums - 1) / (long)2;
-            throw new NotImplementedException();
         }
+        
     }
 }
