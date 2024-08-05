@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ChallengesWithTestsMark8
 {
@@ -25,12 +26,12 @@ namespace ChallengesWithTestsMark8
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
             int sumOfOdds = 0;
-            
+           
             if (numbers == null || numbers.Any())
             {
                 return false;
             }
-            
+
             var iterable = numbers.GetEnumerator();
             int number = iterable.Current;
 

@@ -69,6 +69,10 @@ namespace ChallengesWithTestsMark8
             {
                 return length1;
             }
+            else
+            {
+                return 0;
+            }
         }
 
         
@@ -129,7 +133,7 @@ namespace ChallengesWithTestsMark8
             return (sumOfNumbers % 2 != 0);
         }
 
-        
+
         public long CountOfPositiveOddsBelowNumber(long number)
         {
             Int32 newNums = Convert.ToInt32(number);
@@ -142,7 +146,13 @@ namespace ChallengesWithTestsMark8
                 return (newNums + 1) / (long)2;
             }
             else if (number % 2 == 1)
-                return(newNums - 1) / (long)2;
+            {
+                return (newNums - 1) / (long)2;
+            }
+            else
+            {
+                return 0;
+            }
         }
         
     }
