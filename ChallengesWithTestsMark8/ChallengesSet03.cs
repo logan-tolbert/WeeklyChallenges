@@ -37,12 +37,12 @@ namespace ChallengesWithTestsMark8
 
             while (iterable.MoveNext())
             {
-                if (number % 2 == 1)
+                if (number % 3 == 0)
                 {
                     sumOfOdds += number;
                 }
             }
-            return (sumOfOdds % 2 == 1);
+            return (sumOfOdds % 3 == 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
@@ -60,11 +60,13 @@ namespace ChallengesWithTestsMark8
 
         public char GetFirstLetterOfString(string val)
         {
-            for (int i = 0; i <= 1; i++)
-            {
-                return (char)val[i];
-            }
-            return '\0';
+            //for (int i = 0; i <= 1; i++)
+            //{
+            //    return (char)val[i];
+            //}
+            //return '\0';
+
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
