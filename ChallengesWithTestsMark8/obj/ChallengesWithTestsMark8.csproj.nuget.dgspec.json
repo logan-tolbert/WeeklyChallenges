@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\logo2\\workspace\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj": {}
+    "C:\\Users\\logo8\\source\\repos\\TrueCoders\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\logo2\\workspace\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj": {
+    "C:\\Users\\logo8\\source\\repos\\TrueCoders\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\logo2\\workspace\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
+        "projectUniqueName": "C:\\Users\\logo8\\source\\repos\\TrueCoders\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
         "projectName": "ChallengesWithTestsMark8",
-        "projectPath": "C:\\Users\\logo2\\workspace\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
-        "packagesPath": "C:\\Users\\logo2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\logo2\\workspace\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\obj\\",
+        "projectPath": "C:\\Users\\logo8\\source\\repos\\TrueCoders\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
+        "packagesPath": "C:\\Users\\logo8\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\logo8\\source\\repos\\TrueCoders\\WeeklyChallenges\\ChallengesWithTestsMark8\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\logo2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\logo8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
