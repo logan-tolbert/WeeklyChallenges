@@ -48,10 +48,10 @@ namespace ChallengesWithTestsMark8
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
             string upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-            string lowerCaseChars = "abscefghijklmnopqrstuvwxyz";
+            string lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
             string numbers = "0123456789";
-           
-            if (password.Any(char.IsDigit) && password.Contains(upperCaseChars) && password.Contains(lowerCaseChars) || password.Any(char.IsDigit) && password.Contains(upperCaseChars))
+            
+            if (password.Contains(numbers) && password.Contains(upperCaseChars) || password.Contains(lowerCaseChars))
             {
                 return true;
             }
@@ -86,7 +86,7 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            return (nums[nums.Length - 1] - nums[0]);
         }
 
         public int[] GetOddsBelow100()
