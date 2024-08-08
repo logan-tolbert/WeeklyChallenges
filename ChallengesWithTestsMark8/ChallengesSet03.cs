@@ -27,36 +27,73 @@ namespace ChallengesWithTestsMark8
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
             int sumOfOdds = 0;
-           
-            if (numbers == null || numbers.Any())
+
+            if (numbers == null)
             {
                 return false;
             }
 
-            var iterable = numbers.GetEnumerator();
-            int number = iterable.Current;
-
-            while (iterable.MoveNext())
+            foreach (var number in numbers)
             {
-                if (number % 3 == 0)
+                if (number % 2 != 0)
                 {
                     sumOfOdds += number;
                 }
             }
-            return (sumOfOdds % 3 == 0);
-        }
 
-        public bool PasswordContainsUpperLowerAndNumber(string password)
-        {
-            string upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-            string lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
-            string numbers = "0123456789";
-            
-            if (password.Contains(numbers) && password.Contains(upperCaseChars) || password.Contains(lowerCaseChars))
+            if (sumOfOdds % 2 != 0)
             {
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
+         
+        }
+    
+        public bool PasswordContainsUpperLowerAndNumber(string password)
+        {
+            // passed 13/21
+            //bool hasNumber = false;
+            //bool hasUpper = false;
+            //bool hasLower = false;
+            //string upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+            //string lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+            //string numbers = "0123456789";
+
+            //if (password.Contains(upperCaseChars))
+            //{
+            //    hasUpper = true;
+            //}
+            //if (password.Contains(lowerCaseChars))
+            //{
+            //    hasLower = true;
+            //}
+            //if (password.Contains(upperCaseChars))
+            //{
+            //    hasLower = true;
+            //}
+            //return hasNumber && hasUpper && hasLower;
+            bool hasNumber = false;
+            bool hasUpper = false;
+            bool hasLower = false;
+            foreach (var character in password)
+            {
+                if (char.IsDigit(character))
+                {
+                    hasNumber = true;
+                }
+                if (char.IsUpper(character))
+                {
+                    hasUpper = true;
+                }
+                if (char.IsLower(character))
+                {
+                    hasLower = true;
+                }
+            }
+            return (hasNumber && hasUpper && hasLower);
         }
 
         public char GetFirstLetterOfString(string val)
@@ -105,7 +142,12 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+           
+            for (int i = 0; i <= words.Length - 1; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
+            
         }
     }
 }
