@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.Design;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Threading;
 
 namespace ChallengesWithTestsMark8
 {
@@ -27,7 +30,6 @@ namespace ChallengesWithTestsMark8
                 else if (number % 2 == 1)
                 {
                     result -= number;
-
                 }
             }
             return result;
@@ -36,44 +38,118 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
-            //int max = 0;
-            //List<string> list = new List<string> { str1, str2, str3, str4 };
+            return Math.Min(Math.Min(str1.Length, str2.Length), Math.Min(str3.Length, str4.Length));
         }
+        
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            return Math.Min(Math.Min(number1, number2), Math.Min(number3, number4));
+            
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            if (biz.Name != "TrueCoders")
+            {
+                biz.Name = "TrueCoders";
+            }
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
-        }
+            var S1S2 = sideLength1 + sideLength2;
+            var S1S3 = sideLength1 + sideLength3;
+            var S2S3 = sideLength2 + sideLength3;
 
+            return S1S2 > sideLength3 && S1S3 > sideLength2 && S2S3 > sideLength1;
+
+        }
+        
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            if (input == null)
+            {
+                return false;
+            }
+
+            bool isDigit = double.TryParse(input, out double number);
+            return isDigit;
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            int isNull = 0;
+            int nonNull = 0;      
+            bool result = false;
+
+            foreach (object o in objs)
+            {
+                if (o == null)
+                {
+                    isNull++;
+                }
+                else if (o is string || o is int || o is bool)
+                {
+                    nonNull++;
+                }
+
+                
+                if (nonNull < isNull )
+                {
+                    result = true;
+                }
+                else if (nonNull >= isNull ) 
+                {
+                    result = false;
+                }
+                
+            }
+            return result;
         }
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            List<int> evens = new List<int>();
+            if (numbers == null)
+            {
+                return 0;
+
+            }
+            foreach (int n in numbers)
+            {
+                if (n % 2 == 0)
+                {
+                    evens.Add(n);
+                }
+            }
+
+            if (evens.Any() == false)
+            {
+                return 0;
+            }
+            
+            return evens.Average();
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            if (number <= 1)
+            {
+                return 1;
+            }
+            else 
+            {
+                int factorial = number * Factorial(number - 1);
+
+                return factorial; 
+                
+            }
+           
         }
     }
 }

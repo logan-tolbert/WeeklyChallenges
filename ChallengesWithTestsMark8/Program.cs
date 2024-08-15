@@ -6,7 +6,8 @@ namespace ChallengesWithTestsMark8
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
+            //var test = new ChallengesSet04();
+            //test.CouldFormTriangle(1, 19, 20);
         }
     }
 }
